@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettodbfx.MainFXController">
+   <children>
+      <Button fx:id="btn" layoutX="491.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnSignIsClicked" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Sign-in" />
+      <RadioButton fx:id="client_radio" layoutX="433.0" layoutY="126.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="73.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" selected="true" text="Client">
+         <toggleGroup>
+            <ToggleGroup fx:id="choice" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="employee_radio" layoutX="433.0" layoutY="155.0" mnemonicParsing="false" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Employee" toggleGroup="$choice" />
+      <ImageView fitHeight="351.0" fitWidth="320.0" layoutX="52.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" scaleY="1.1">
+         <image>
+            <Image url="@wine.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="443.0" layoutY="80.0" prefHeight="25.0" prefWidth="151.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Sign-in">
+         <font>
+            <Font name="Forte" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username_textfield" layoutX="443.0" layoutY="228.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" />
+      <PasswordField fx:id="password_textfield" layoutX="424.0" layoutY="290.0" prefHeight="31.0" prefWidth="186.0" />
+      <Text layoutX="443.0" layoutY="216.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="445.0" layoutY="284.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Hyperlink layoutX="29.0" layoutY="422.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Forgot the password?" />
+      <Hyperlink layoutX="36.0" layoutY="452.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Don't have an account? Sign-up" />
+   </children>
+</Pane>
