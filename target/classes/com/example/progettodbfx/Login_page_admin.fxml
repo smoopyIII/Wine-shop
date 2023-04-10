@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettodbfx.MainFXController">
+   <children>
+      <Button fx:id="btn" layoutX="489.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnSignIsClicked" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Sign-in" />
+      <ImageView fitHeight="351.0" fitWidth="320.0" layoutX="52.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" scaleY="1.1">
+         <image>
+            <Image url="@wine.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="441.0" layoutY="55.0" prefHeight="25.0" prefWidth="151.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Sign-in admin" textAlignment="CENTER">
+         <font>
+            <Font name="Forte" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username_textfield" layoutX="441.0" layoutY="166.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" />
+      <Text layoutX="441.0" layoutY="154.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="443.0" layoutY="222.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Hyperlink layoutX="29.0" layoutY="459.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Forgot the password?" />
+      <PasswordField fx:id="password_textfield" layoutX="422.0" layoutY="228.0" prefHeight="31.0" prefWidth="186.0" />
+   </children>
+</Pane>

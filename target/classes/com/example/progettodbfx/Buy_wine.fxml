@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="500.0" maxWidth="900.0" minHeight="500.0" minWidth="1100.0" prefHeight="500.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettodbfx.BuyWineFXController">
+   <children>
+      <AnchorPane fx:id="mainAnchorPane">
+         <children>
+            <TableView fx:id="table" layoutY="90.0" prefHeight="415.0" prefWidth="1100.0" style="-fx-translate-z: 4;">
+               <columns>
+                  <TableColumn fx:id="cId"  prefWidth="30.0" sortable="false" text="ID" />
+                  <TableColumn fx:id="cName" prefWidth="105.0" sortable="false" text="NAME" />
+                  <TableColumn fx:id="cProducer"  prefWidth="150.0" sortable="false" text="PRODUCER" />
+                  <TableColumn fx:id="cOrigin" prefWidth="170.0" sortable="false" text="ORIGIN" />
+                  <TableColumn fx:id="cYear"  prefWidth="60.0" sortable="false" text="YEAR" />
+                  <TableColumn fx:id="cGrape"  prefWidth="100" sortable="false" text="GRAPE" />
+                  <TableColumn fx:id="cTecnicalNotes" prefWidth="194" sortable="false" text="TECNICAL NOTES" />
+                  <TableColumn fx:id="cAvailability" prefWidth="96" sortable="false" text="AVAILABILITY" />
+                  <TableColumn fx:id="cPrice" prefWidth="68" sortable="false" text="PRICE" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="90.0" prefWidth="1100.0" style="-fx-background-color: #A2B6C4;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                     <image>
+                        <Image url="@wine.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="client_name_label" alignment="BOTTOM_RIGHT" prefHeight="17.0" prefWidth="100.0" textAlignment="RIGHT" translateX="660.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 670;">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="mail" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 680;">
+                     <image>
+                        <Image url="@Mail.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="bell" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 690;">
+                     <image>
+                        <Image url="@bell.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 700;">
+                     <image>
+                        <Image url="@logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="btn" alignment="TOP_CENTER" layoutX="1006.0" layoutY="23.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#logoutIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="alarm_btn" alignment="TOP_CENTER" layoutX="956.0" layoutY="25.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#alarmIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="mail_btn" alignment="TOP_CENTER" layoutX="906.0" layoutY="24.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#mailIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="account_btn" alignment="TOP_CENTER" layoutX="856.0" layoutY="24.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#accountIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" text="account" />
+            <Button fx:id="home_btn" alignment="TOP_CENTER" layoutX="10.0" layoutY="3.0" maxHeight="90.0" maxWidth="100.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#homeIsClicked" opacity="0.0" prefHeight="83.0" prefWidth="90.0" style="-fx-translate-x: 0;" />
+            <VBox fx:id="vbox" layoutX="998.0" layoutY="115.0" prefHeight="390.0" prefWidth="100.0" />
+            <Button fx:id="shop_btn" alignment="CENTER" layoutX="523.0" layoutY="26.0" maxHeight="40.0" maxWidth="90.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="90.0" text="BUY WINE" textAlignment="CENTER" />
+            <Label layoutX="141.0" layoutY="33.0" text="- 10% DISCOUNT if you buy a box of 12 bottles&#10;- 5% DISCOUT if you buy a box of 6 bottles">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="proposalPane" layoutX="360.0" layoutY="160.0" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: #A2B6C4;" visible="false">
+         <children>
+            <Label layoutX="8.0" layoutY="41.0" text="We don't have enought wine in our store&#10;Do you want to fill a purchase proposal with the same amount of bottle?" textAlignment="CENTER" />
+            <Label layoutX="181.0" layoutY="6.0" text="ERROR" textAlignment="CENTER" textFill="RED" />
+            <Button fx:id="yes_btn" layoutX="145.0" layoutY="101.0" mnemonicParsing="false" text="YES" />
+            <Button fx:id="no_btn" layoutX="218.0" layoutY="101.0" mnemonicParsing="false" text="NO" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

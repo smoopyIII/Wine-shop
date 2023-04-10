@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettodbfx.ReportFXController">
+   <children>
+      <Label fx:id="client_name_label" alignment="BOTTOM_RIGHT" layoutX="433.0" layoutY="21.0" prefHeight="17.0" prefWidth="100.0" text="" textAlignment="RIGHT" />
+      <AnchorPane>
+         <children>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="87.0" prefWidth="900.0" style="-fx-background-color: #A2B6C4;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                     <image>
+                        <Image url="@wine.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="employee_name_label" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" text="Admin" textAlignment="RIGHT" translateX="505.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 510;">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 520;">
+                     <image>
+                        <Image url="@Mail.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#alarmIsClicked" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 530;">
+                     <image>
+                        <Image url="@bell.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 540;">
+                     <image>
+                        <Image url="@logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="home_btn" layoutX="12.0" mnemonicParsing="false" onAction="#homeIsClicked" opacity="0.0" prefHeight="85.0" prefWidth="85.0" />
+            <Button fx:id="account_btn" layoutX="700.0" layoutY="25.0" mnemonicParsing="false" onAction="#accountIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" translateZ="5.0">
+               <rotationAxis>
+                  <Point3D z="5.0" />
+               </rotationAxis>
+            </Button>
+            <Button fx:id="mail_btn" layoutX="750.0" layoutY="25.0" mnemonicParsing="false" onAction="#mailIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="alarm_btn" layoutX="800.0" layoutY="25.0" mnemonicParsing="false" onAction="#alarmIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="logout_btn" layoutX="850.0" layoutY="25.0" mnemonicParsing="false" onAction="#logoutIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="income_label" layoutX="138.0" layoutY="167.0" prefHeight="40.0" prefWidth="165.0" text="+150 €">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="166.0" prefHeight="40.0" prefWidth="100.0" text="Incomes:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="costs_label" layoutX="105.0" layoutY="208.0" prefHeight="40.0" prefWidth="165.0" text="+150 €">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="207.0" prefHeight="40.0" prefWidth="90.0" text="Costs:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="bottle_sold_label" layoutX="173.0" layoutY="247.0" prefHeight="40.0" prefWidth="165.0" text="+150 €">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="247.0" prefHeight="40.0" prefWidth="138.0" text="Bottles sold:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="remaining_bottles_label" layoutX="245.0" layoutY="287.0" prefHeight="40.0" prefWidth="165.0" text="+150 €">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="287.0" prefHeight="40.0" prefWidth="206.0" text="Remaining bottles:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="552.0" layoutY="160.0" prefHeight="389.0" prefWidth="330.0">
+         <columns>
+            <TableColumn fx:id="Name" prefWidth="200.0" text="NAME WINE" />
+            <TableColumn fx:id="quantity" prefWidth="127.0" text="QUANTITY SOLD" />
+         </columns>
+      </TableView>
+      <Label layoutX="684.0" layoutY="111.0" prefHeight="29.0" prefWidth="125.0" scaleX="1.25" scaleY="1.25" text="Wines sold">
+         <font>
+            <Font name="Forte" size="25.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="lineChart" layoutX="14.0" layoutY="327.0" prefHeight="223.0" prefWidth="510.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <DatePicker fx:id="from_date" layoutX="71.0" layoutY="113.0" />
+      <DatePicker fx:id="to_date" layoutX="303.0" layoutY="113.0" />
+      <Label layoutX="23.0" layoutY="117.0" scaleX="1.25" scaleY="1.25" text="from:" />
+      <Label layoutX="279.0" layoutY="117.0" scaleX="1.25" scaleY="1.25" text="To:" />
+      <Button fx:id="go" layoutX="511.0" layoutY="113.0" mnemonicParsing="false" onAction="#goIsClicked" scaleX="1.25" scaleY="1.25" text="Go" />
+   </children>
+</Pane>

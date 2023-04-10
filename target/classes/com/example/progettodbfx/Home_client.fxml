@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettodbfx.HomeClientFXController">
+   <children>
+      <AnchorPane fx:id="funzioniAnchorPane" layoutX="299.375" layoutY="144.0">
+         <children>
+            <ImageView fx:id="wine_list_img" fitHeight="100.0" fitWidth="100.0" layoutX="22.625" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@wine-menu.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="buy_wine_img" fitHeight="100.0" fitWidth="100.0" layoutX="195.625" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@buy-wine.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="show_purchase_img" fitHeight="100.0" fitWidth="100.0" layoutX="15.625" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@shopping-list.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="search_wine_img" fitHeight="100.0" fitWidth="81.0" layoutX="203.625" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@loupe.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="20.125" layoutY="119.375" prefHeight="17.0" prefWidth="100.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Wine list" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="196.125" layoutY="119.375" prefHeight="17.0" prefWidth="100.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Buy wine" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="269.375" prefHeight="21.0" prefWidth="117.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Show purchases" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="205.125" layoutY="269.375" prefHeight="17.0" prefWidth="100.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Search wine" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="buy_wine_btn" layoutX="195.625" layoutY="10.0" mnemonicParsing="false" onAction="#buyWineIsClicked" opacity="0.0" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="wine_list_btn" layoutX="23.625" mnemonicParsing="false" onAction="#wineListIsClicked" opacity="0.0" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="show_purchase_btn" layoutX="15.625" layoutY="160.0" mnemonicParsing="false" onAction="#showPurchaseIsClicked" opacity="0.0" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="search_wine_btn" layoutX="194.625" layoutY="160.0" mnemonicParsing="false" onAction="#searchWineIsClicked" opacity="0.0" prefHeight="100.0" prefWidth="100.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="barAnchorPane">
+         <children>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="87.0" prefWidth="900.0" style="-fx-background-color: #A2B6C4;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                     <image>
+                        <Image url="@wine.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="client_name_label" alignment="BOTTOM_RIGHT" prefHeight="17.0" prefWidth="100.0" textAlignment="RIGHT" translateX="505.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 510;">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="mail" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 520;">
+                     <image>
+                        <Image url="@Mail.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="bell" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#alertIsClicked" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 530;">
+                     <image>
+                        <Image url="@bell.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 540;">
+                     <image>
+                        <Image url="@logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="home_btn" layoutX="12.0" mnemonicParsing="false" onAction="#homeIsClicked" opacity="0.0" prefHeight="85.0" prefWidth="85.0" />
+            <Button fx:id="account_btn" layoutX="700.0" layoutY="25.0" mnemonicParsing="false" onAction="#accountIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" translateZ="5.0">
+               <rotationAxis>
+                  <Point3D z="5.0" />
+               </rotationAxis>
+            </Button>
+            <Button fx:id="cart_btn" layoutX="750.0" layoutY="25.0" mnemonicParsing="false" onAction="#mailIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="alert_btn" layoutX="800.0" layoutY="25.0" mnemonicParsing="false" onAction="#alertIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="logout_btn" layoutX="850.0" layoutY="25.0" mnemonicParsing="false" onAction="#logoutIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="offerteAnchorPane" layoutX="14.0" layoutY="100.0" prefHeight="391.0" prefWidth="259.0" style="-fx-background-color: #A2B6C4;">
+         <children>
+            <Button fx:id="closeOffer" layoutX="99.0" layoutY="347.0" mnemonicParsing="false" onAction="#closeOfferIsClicked" prefHeight="25.0" prefWidth="60.0" text="Close" />
+            <Label fx:id="onSaleOffer" layoutX="96.0" layoutY="14.0" text="ON SALE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="noOfferLabel" layoutX="43.0" layoutY="152.0" prefHeight="26.0" prefWidth="173.0" text="THERE ARE NO OFFER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="onSaleTable" layoutX="8.0" layoutY="52.0" prefHeight="290.0" prefWidth="242.0">
+               <columns>
+                  <TableColumn fx:id="wineColumn" prefWidth="171.0" text="Wine" />
+                  <TableColumn fx:id="discountColumn" prefWidth="72.0" text="Discount" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

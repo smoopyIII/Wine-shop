@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="500.0" maxWidth="900.0" minHeight="500.0" minWidth="1100.0" prefHeight="500.0" prefWidth="1100.0" style="-fx-background-color: WHYTE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettodbfx.DiscountFXController">
+   <children>
+      <AnchorPane fx:id="mainAnchorPane">
+         <children>
+            <TableView fx:id="table" layoutY="90.0" prefHeight="415.0" prefWidth="1100.0" style="-fx-translate-z: 4;">
+               <columns>
+                  <TableColumn fx:id="cId" maxWidth="38.0" minWidth="38.0" prefWidth="38.0" sortable="false" text="ID" />
+                  <TableColumn fx:id="cName" maxWidth="120.0" minWidth="105.0" prefWidth="120.0" sortable="false" text="NAME" />
+                  <TableColumn fx:id="cProducer" maxWidth="163.0" minWidth="150" prefWidth="163.0" sortable="false" text="PRODUCER" />
+                  <TableColumn fx:id="cOrigin" maxWidth="200.0" minWidth="170.0" prefWidth="200.0" sortable="false" text="ORIGIN" />
+                  <TableColumn fx:id="cYear" maxWidth="101.0" minWidth="56.0" prefWidth="70.0" sortable="false" text="YEAR" />
+                  <TableColumn fx:id="cGrape" maxWidth="215.0" minWidth="125.0" prefWidth="190.0" sortable="false" text="GRAPE" />
+                  <TableColumn fx:id="cAvailability" maxWidth="152.0" minWidth="68.0" prefWidth="68.0" sortable="false" text="QUANTITY" />
+                  <TableColumn fx:id="cPrice" maxWidth="210.0" minWidth="58.0" prefWidth="100.0" sortable="false" text="PRICE" />
+
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="90.0" prefWidth="1100.0" style="-fx-background-color: #A2B6C4;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                     <image>
+                        <Image url="@wine.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="client_name_label" alignment="BOTTOM_RIGHT" prefHeight="17.0" prefWidth="100.0" textAlignment="RIGHT" translateX="660.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 670;">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 680;">
+                     <image>
+                        <Image url="@Mail.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 690;">
+                     <image>
+                        <Image url="@bell.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 700;">
+                     <image>
+                        <Image url="@logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="btn" alignment="TOP_CENTER" layoutX="1006.0" layoutY="23.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#logoutIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="alarm_btn" alignment="TOP_CENTER" layoutX="956.0" layoutY="25.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#alarmIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="mail_btn" alignment="TOP_CENTER" layoutX="906.0" layoutY="24.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#mailIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="account_btn" alignment="TOP_CENTER" layoutX="856.0" layoutY="24.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#accountIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" text="account" />
+            <Button fx:id="home_btn" alignment="TOP_CENTER" layoutX="10.0" layoutY="3.0" maxHeight="90.0" maxWidth="100.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#homeIsClicked" opacity="0.0" prefHeight="83.0" prefWidth="90.0" style="-fx-translate-x: 0;" />
+           </children>
+      </AnchorPane>
+      <Button fx:id="discount_btn" layoutX="490.0" layoutY="30.0" mnemonicParsing="false" onAction="#discountIsClicked" scaleX="1.25" scaleY="1.25" text="Apply" />
+   </children>
+</Pane>

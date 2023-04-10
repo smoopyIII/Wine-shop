@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettodbfx.ShowPurchaseFXController">
+   <children>
+      <TableView fx:id="table" layoutY="87.0" prefHeight="415.0" prefWidth="900.0">
+        <columns>
+            <TableColumn fx:id="cId" prefWidth="44.0" text="ID" />
+            <TableColumn fx:id="cCid" prefWidth="113.0" text="CLIENT" />
+            <TableColumn fx:id="cDate" text="DATE" />
+            <TableColumn fx:id="cValue" prefWidth="75.0" text="VALUE" />
+            <TableColumn fx:id="cQuantity" minWidth="4.0" prefWidth="135.0" text="QUANTITY" />
+
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER_LEFT" disable="true" prefHeight="87.0" prefWidth="900.0" style="-fx-background-color: #A2B6C4;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+               <image>
+                  <Image url="@wine.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="client_name_label" alignment="BOTTOM_RIGHT" prefHeight="17.0" prefWidth="100.0" text="Nome" textAlignment="RIGHT" translateX="505.0" />
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 510;">
+               <image>
+                  <Image url="@user.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="mail" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 520;">
+               <image>
+                  <Image url="@Mail.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bell" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 530;">
+               <image>
+                  <Image url="@bell.png" />
+               </image>
+            </ImageView>
+            <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 540;">
+               <image>
+                  <Image url="@logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Button fx:id="logout_btn" alignment="TOP_CENTER" layoutX="760.0" layoutY="23.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#logoutIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" style="-fx-translate-x: 90;" />
+      <Button fx:id="alarm_btn" alignment="TOP_CENTER" layoutX="710.0" layoutY="23.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#alarmIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" style="-fx-translate-x: 90;" />
+      <Button fx:id="mail_btn" alignment="TOP_CENTER" layoutX="660.0" layoutY="24.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#mailIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" style="-fx-translate-x: 90;" />
+      <Button fx:id="account_btn" alignment="TOP_CENTER" layoutX="610.0" layoutY="24.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#accountIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" style="-fx-translate-x: 90;" />
+      <Button fx:id="home_btn" alignment="TOP_CENTER" layoutX="-80.0" layoutY="3.0" maxHeight="90.0" maxWidth="100.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#homeIsClicked" opacity="0.0" prefHeight="83.0" prefWidth="90.0" style="-fx-translate-x: 90;" />
+   </children>
+</Pane>
