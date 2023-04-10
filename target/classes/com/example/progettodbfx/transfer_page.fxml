@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettodbfx.TransferFXController">
+   <children>
+      <ImageView fx:id="logout_img" fitHeight="30.0" fitWidth="30.0" layoutX="656.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logout.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="alert_img" fitHeight="30.0" fitWidth="30.0" layoutX="615.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bell.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="account_img" fitHeight="30.0" fitWidth="30.0" layoutX="541.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="client_name_label" alignment="BOTTOM_RIGHT" layoutX="433.0" layoutY="21.0" prefHeight="17.0" prefWidth="100.0" text="" textAlignment="RIGHT" />
+      <ImageView fx:id="cart_img" fitHeight="30.0" fitWidth="30.0" layoutX="577.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@shopping-cart.png" />
+         </image>
+      </ImageView>
+      <AnchorPane>
+         <children>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="87.0" prefWidth="900.0" style="-fx-background-color: #A2B6C4;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                     <image>
+                        <Image url="@wine.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="client_name_label" alignment="BOTTOM_RIGHT" prefHeight="17.0" prefWidth="100.0" textAlignment="RIGHT" translateX="505.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 510;">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="mail" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 520;">
+                     <image>
+                        <Image url="@Mail.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="bell" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#alertIsClicked" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 530;">
+                     <image>
+                        <Image url="@bell.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-translate-x: 540;">
+                     <image>
+                        <Image url="@logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="home_btn" layoutX="12.0" mnemonicParsing="false" onAction="#homeIsClicked" opacity="0.0" prefHeight="85.0" prefWidth="85.0" />
+            <Button fx:id="account_btn" layoutX="700.0" layoutY="25.0" mnemonicParsing="false" onAction="#accountIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" translateZ="5.0">
+               <rotationAxis>
+                  <Point3D z="5.0" />
+               </rotationAxis>
+            </Button>
+            <Button fx:id="mail_btn" layoutX="750.0" layoutY="25.0" mnemonicParsing="false" onAction="#mailIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="alert_btn" layoutX="800.0" layoutY="25.0" mnemonicParsing="false" onAction="#alertIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+            <Button fx:id="logout_btn" layoutX="850.0" layoutY="25.0" mnemonicParsing="false" onAction="#logoutIsClicked" opacity="0.0" prefHeight="40.0" prefWidth="40.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="buy_wine_btn" layoutX="702.0" layoutY="398.0" mnemonicParsing="false" onAction="#buyIsClicked" prefHeight="41.0" prefWidth="129.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="Buy" />
+      <TextField fx:id="Name_textfield" layoutX="361.0" layoutY="141.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" />
+      <TextField fx:id="Beneficiary_name_textfield" layoutX="359.0" layoutY="237.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" />
+      <Text layoutX="349.0" layoutY="121.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="356.0" layoutY="212.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Beneficiary name" />
+      <TextField fx:id="beneficiary_surname_textfield" layoutX="562.0" layoutY="237.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" />
+      <TextField fx:id="IBAN_textfield" layoutX="361.0" layoutY="331.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" />
+      <Text layoutX="557.0" layoutY="213.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Beneficiary surname" />
+      <Text layoutX="351.0" layoutY="318.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="IBAN" />
+      <TextField fx:id="Surname_textfield" layoutX="561.0" layoutY="142.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" />
+      <Text layoutX="549.0" layoutY="122.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" />
+      <Text layoutX="354.0" layoutY="387.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Value" />
+      <ImageView fitHeight="154.0" fitWidth="125.0" layoutX="94.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true" scaleX="1.25" scaleY="1.25" scaleZ="1.25">
+         <image>
+            <Image url="@transfer-money.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="Value_label" layoutX="383.0" layoutY="399.0" prefHeight="17.0" prefWidth="152.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" />
+      <Label layoutX="351.0" layoutY="399.0" scaleX="1.25" scaleY="1.25" scaleZ="1.25" text="€" />
+      <TextField fx:id="delivery_address" layoutX="565.0" layoutY="330.0" scaleX="1.25" scaleY="1.25" />
+      <Text layoutX="562.0" layoutY="317.0" scaleX="1.25" scaleY="1.25" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Address" />
+      <Label fx:id="delivery_day" layoutX="697.0" layoutY="461.0" scaleX="1.25" scaleY="1.25" text="Day of delivery :  " />
+   </children>
+</Pane>
